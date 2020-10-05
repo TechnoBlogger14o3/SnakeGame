@@ -53,7 +53,6 @@ def pause():
         #screen.fill(white)
 
 
-
 def winner():
     paused = True
 
@@ -122,6 +121,7 @@ def snake(block,snakelist):
     for XnY in snakelist[:-1]:
         pygame.draw.rect(screen, black, [XnY[0], XnY[1], block, block])
 
+        
 def text_objects(text,color,size):
     if size == "small":
         textSurface = small_font.render(text,True,color)
@@ -130,6 +130,7 @@ def text_objects(text,color,size):
     elif size == "large":
         textSurface = large_font.render(text,True,color)
     return textSurface,textSurface.get_rect()
+
 
 def display_msg(msg,color,y_displace=0,size="small"):
     textSurf,textRect = text_objects(msg,color,size)
